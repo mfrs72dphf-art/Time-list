@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="it"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leonardo time</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Leonardo time">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#f2f5f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e151b" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-touch-callout:none}
+[hidden]:not([hidden=until-found i]){display:none!important}
+body{-webkit-user-select:none;user-select:none;overscroll-behavior-y:none}
+input,textarea{-webkit-user-select:text;user-select:text}
+/* Layout: registro mensile a colonna singola. In alto i due saldi, poi il calendario del mese, il riepilogo e l'elenco dei giorni; inserimento giornata e saldi iniziali si aprono in un pannello dal basso. */
+:root {
+  --bg: #f2f5f8;
+  --surface: #ffffff;
+  --line: #dbe2e9;
+  --fg: #14202b;
+  --muted: #5a6c7b;
+  --banca: #14707a;
+  --str: #a14c00;
+  --ferie: #6a4bb0;
+  --neg: #b3261e;
+  --accent: #14707a;
+  --on-accent: #ffffff;
+  --soft: #e8eef3;
+  --scrim: rgba(10, 20, 30, 0.45);
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e151b; --surface: #16202a; --line: #263441; --fg: #e8eef3; --muted: #94a4b2;
+    --banca: #52c6d0; --str: #f2a552; --ferie: #bba8f5; --neg: #ff8f86; --accent: #52c6d0; --on-accent: #07242a;
+    --soft: #1d2a35; --scrim: rgba(0, 0, 0, 0.6); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e151b; --surface: #16202a; --line: #263441; --fg: #e8eef3; --muted: #94a4b2;
+  --banca: #52c6d0; --str: #f2a552; --ferie: #bba8f5; --neg: #ff8f86; --accent: #52c6d0; --on-accent: #07242a;
+  --soft: #1d2a35; --scrim: rgba(0, 0, 0, 0.6); color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 15px; line-height: 1.45;
+  padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-text-size-adjust: 100%;
+}
+button { font: inherit; color: inherit; cursor: pointer; }
+.app { max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+header.top > div { min-width: 0; }
+h1 { font-family: var(--font-display); font-size: 24px; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+.rule { font-size: 12px; color: var(--muted); margin: 2px 0 0; }
+.small { padding: 9px 12px; font-size: 13px; white-space: nowrap; }
+
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px; min-width: 0; }
+.tile .lab { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.tile .big { font-family: var(--font-display); font-size: 32px; font-weight: 600; line-height: 1.1; margin-top: 6px; font-variant-numeric: tabular-nums; }
+.tile .sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.tile.b .big { color: var(--banca); }
+.tile.s .big { color: var(--str); }
+.big.neg { color: var(--neg) !important; }
+
+.cta {
+  background: var(--accent); color: var(--on-accent); border: 0; border-radius: 12px;
+  font-weight: 600; padding: 13px 16px; width: 100%;
+}
+.ghost { background: transparent; border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; font-weight: 500; }
+
+.notice { background: var(--surface); border: 1px solid var(--accent); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.notice strong { font-family: var(--font-display); font-size: 16px; }
+.notice p { margin: 0; color: var(--muted); font-size: 14px; }
+
+.monthbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.monthbar h2 { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin: 0; text-align: center; flex: 1; }
+.nav { width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); font-size: 18px; line-height: 1; }
+
+.cal { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.dow { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); text-align: center; padding-bottom: 2px; }
+.day {
+  min-height: 66px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 5px 3px 4px; display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 0;
+}
+.day.empty { background: transparent; border-color: transparent; pointer-events: none; }
+.day .d { font-size: 13px; font-weight: 600; }
+.day.we .d { color: var(--muted); }
+.day.today { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.day.has { background: var(--soft); }
+.chip { font-size: 10px; font-weight: 600; line-height: 1.25; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.chip.b { color: var(--banca); }
+.chip.s { color: var(--str); }
+.chip.f { color: var(--ferie); }
+.chip.n { color: var(--neg); }
+.chip.ok { color: var(--muted); font-weight: 500; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 4px 14px; }
+.card h3 { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 12px 0 2px; }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.row:last-child { border-bottom: 0; }
+.row .k { color: var(--muted); min-width: 0; }
+.row .v { font-family: var(--font-display); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.v.b { color: var(--banca); } .v.s { color: var(--str); } .v.f { color: var(--ferie); } .v.neg { color: var(--neg); }
+
+.list { display: flex; flex-direction: column; }
+.item { display: grid; grid-template-columns: 52px 1fr auto; gap: 10px; align-items: center; width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); padding: 11px 0; min-width: 0; }
+.item:last-child { border-bottom: 0; }
+.item .dd { font-family: var(--font-display); font-weight: 600; }
+.item .dd small { display: block; font-family: var(--font-body); font-weight: 500; font-size: 11px; color: var(--muted); }
+.item .hh { min-width: 0; font-variant-numeric: tabular-nums; }
+.item .hh small { display: block; color: var(--muted); font-size: 12px; }
+.item .chips { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+.item .chip { font-size: 12px; }
+.hint { color: var(--muted); font-size: 14px; padding: 14px 0; }
+
+details.backup { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+details.backup summary { font-weight: 600; cursor: pointer; }
+details.backup p { color: var(--muted); font-size: 13px; margin: 10px 0; }
+details.backup textarea { width: 100%; min-height: 84px; background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 10px; padding: 10px; font: 12px/1.4 ui-monospace, Menlo, monospace; }
+.btnrow { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.btnrow .ghost { flex: 1; padding: 10px 12px; }
+
+.scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 20; display: flex; align-items: flex-end; justify-content: center; }
+.sheet {
+  background: var(--surface); width: 100%; max-width: 520px; max-height: 92%; overflow-y: auto;
+  border-radius: 20px 20px 0 0; border: 1px solid var(--line); border-bottom: 0;
+  padding-top: 18px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  display: flex; flex-direction: column; gap: 14px;
+}
+.sheet h2 { font-family: var(--font-display); font-size: 18px; margin: 0; }
+.sheet .note { font-size: 13px; color: var(--muted); margin: 0; }
+.times { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+.field { min-width: 0; }
+.field label, .balrow > label { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 4px; }
+.field input { display: block; width: 100%; min-width: 0; max-width: 100%; -webkit-appearance: none; appearance: none; font: 600 22px var(--font-display); font-variant-numeric: tabular-nums; background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 12px; padding: 10px 8px; text-align: center; line-height: 1.3; }
+.field input[type="time"] { min-height: 52px; }
+.field input::-webkit-date-and-time-value { text-align: center; min-width: 0; margin: 0 auto; }
+.field input::-webkit-datetime-edit { padding: 0; }
+.result { background: var(--bg); border-radius: 12px; padding: 4px 14px; }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.seg.two { grid-template-columns: 1fr 1fr; }
+.seg button { border: 1px solid var(--line); background: var(--bg); border-radius: 10px; padding: 10px 4px; font-size: 13px; font-weight: 500; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); border-color: var(--accent); font-weight: 600; }
+.cmp-lab { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.danger { color: var(--neg); }
+.actions { display: grid; gap: 8px; }
+.cta:disabled { opacity: 0.45; cursor: default; }
+.balrow { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 8px; align-items: end; }
+.balrow > label { grid-column: 1 / -1; margin-bottom: 0; }
+.balrow .field label { font-weight: 500; }
+.balrow input { font-size: 20px; padding: 9px 10px; }
+.balrow .seg button { padding: 13px 4px; font-size: 16px; }
+@media (prefers-reduced-motion: no-preference) { .sheet { animation: up .18s ease-out; } @keyframes up { from { transform: translateY(24px); opacity: .6; } } }
+
+.tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; background: var(--soft); padding: 4px; border-radius: 14px; }
+.tabs button { border: 0; background: transparent; border-radius: 10px; padding: 11px 4px; font-size: 14px; font-weight: 600; color: var(--muted); }
+.tabs button[aria-selected="true"] { background: var(--surface); color: var(--fg); box-shadow: 0 1px 3px rgba(0,0,0,.18); }
+.page { display: flex; flex-direction: column; gap: 18px; }
+.card.pad { padding: 4px 14px 14px; }
+.form { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.inline { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: stretch; }
+#tdEdit { width: 100%; margin-top: 12px; }
+.hero { text-align: center; padding: 14px 0 12px; }
+.hero + .hero { border-top: 1px solid var(--line); }
+.hero .lab { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.hero .big { font-family: var(--font-display); font-size: 48px; font-weight: 700; line-height: 1.1; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.hero .big.b { color: var(--banca); }
+.hero .sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.pnote { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+</style>
+</head><body>
+<div class="app">
+  <header class="top">
+    <div>
+      <h1>Leonardo time</h1>
+      <p class="rule">Ingresso 7:45–8:45 · uscita 16:30–17:30 · giornata di 8:45</p>
+      <p class="rule" id="syncSt"></p>
+    </div>
+    <button class="ghost small" id="btnSet">Saldi iniziali</button>
+  </header>
+
+  <section class="notice" id="firstRun" hidden>
+    <strong>Parti dal tuo saldo</strong>
+    <p>Inserisci la banca ore che hai già accumulato, così il totale è corretto fin dal primo giorno.</p>
+    <button class="cta" id="btnFirst">Imposta saldi iniziali</button>
+  </section>
+
+  <section class="tiles" aria-label="Saldi">
+    <div class="tile b"><div class="lab">Banca ore</div><div class="big" id="tB">0:00</div><div class="sub">saldo totale</div></div>
+    <div class="tile s"><div class="lab">Precup</div><div class="big" id="tS">0:00</div><div class="sub" id="tSsub">bimestre</div></div>
+  </section>
+
+  <nav class="tabs" id="tabs" aria-label="Sezioni">
+    <button type="button" data-t="oggi" aria-selected="true">Oggi</button>
+    <button type="button" data-t="plan" aria-selected="false">Pianifica</button>
+    <button type="button" data-t="reg" aria-selected="false">Registro</button>
+  </nav>
+
+  <div class="page" id="pg-oggi">
+    <section class="card pad">
+      <h3 id="tdTitle">Oggi</h3>
+      <div id="tdInfo"></div>
+      <div class="form" id="tdFormIn" hidden>
+        <div class="field"><label for="tdInT">Orario di ingresso</label>
+          <div class="inline"><input type="time" id="tdInT" step="60"><button type="button" class="ghost small" id="tdInNow">Adesso</button></div>
+        </div>
+        <button class="cta" id="tdInSave">Registra ingresso</button>
+      </div>
+      <div class="form" id="tdFormOut" hidden>
+        <div class="field"><label for="tdOutT">Orario di uscita</label>
+          <div class="inline"><input type="time" id="tdOutT" step="60"><button type="button" class="ghost small" id="tdOutNow">Adesso</button></div>
+        </div>
+        <button class="cta" id="tdOutSave">Registra uscita</button>
+      </div>
+      <button class="ghost" id="tdEdit" hidden>Modifica giornata</button>
+    </section>
+  </div>
+
+  <div class="page" id="pg-plan" hidden>
+    <section class="card pad">
+      <h3>Pianifica l’uscita</h3>
+      <p class="pnote" style="margin-top:4px">Scegli l’ingresso e vedi a che ora uscire per maturare solo banca ore, senza Precup.</p>
+      <div class="form">
+        <div class="field"><label for="plIn">Orario di ingresso</label><input type="time" id="plIn" step="60"></div>
+      </div>
+      <div id="plOut"></div>
+    </section>
+  </div>
+
+  <div class="page" id="pg-reg" hidden>
+  <button class="cta" id="btnToday">Inserisci oggi</button>
+
+  <section>
+    <div class="monthbar">
+      <button class="nav" id="prev" aria-label="Mese precedente">‹</button>
+      <h2 id="mTitle">Mese</h2>
+      <button class="nav" id="next" aria-label="Mese successivo">›</button>
+    </div>
+  </section>
+
+  <section class="cal" id="cal" aria-label="Calendario"></section>
+
+  <section class="card" id="sum"></section>
+
+  <section>
+    <div class="card" style="padding-block: 2px;">
+      <h3>Giorni del mese</h3>
+      <div class="list" id="list"></div>
+    </div>
+  </section>
+
+  <details class="backup">
+    <summary>Backup dei dati</summary>
+    <p>I dati restano su questo dispositivo. Copia il backup e conservalo; per ripristinare incollalo qui sotto (sostituisce i dati attuali).</p>
+    <textarea id="bk" aria-label="Backup" placeholder="Incolla qui il backup"></textarea>
+    <div class="btnrow">
+      <button class="ghost" id="bkCopy">Copia backup</button>
+      <button class="ghost" id="bkRestore">Ripristina</button>
+    </div>
+    <p id="bkMsg" role="status"></p>
+  </details>
+  </div>
+</div>
+
+<div class="scrim" id="scrim" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sTitle">
+    <h2 id="sTitle">Giorno</h2>
+    <div class="times">
+      <div class="field"><label for="tin">Ingresso</label><input type="time" id="tin" step="60"></div>
+      <div class="field"><label for="tout">Uscita</label><input type="time" id="tout" step="60"></div>
+    </div>
+    <div class="result" id="res"></div>
+    <div id="compWrap" hidden>
+      <div class="cmp-lab" id="cmpLab">Come vuoi coprirlo?</div>
+      <div class="seg" id="seg">
+        <button type="button" data-c="banca" aria-pressed="false">Banca ore</button>
+        <button type="button" data-c="straord" aria-pressed="false">Precup</button>
+        <button type="button" data-c="ferie" aria-pressed="false">Ferie</button>
+      </div>
+      <p class="note" style="margin-top:8px">Con le ferie il tempo non viene sottratto dai saldi.</p>
+    </div>
+    <div class="actions">
+      <button class="cta" id="save" disabled>Salva</button>
+      <button class="ghost" id="ferieDay">Segna giornata intera di ferie</button>
+      <button class="ghost" id="close">Chiudi</button>
+      <button class="ghost danger" id="del" hidden>Elimina questo giorno</button>
+    </div>
+  </div>
+</div>
+
+<div class="scrim" id="scrimS" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="setTitle">
+    <h2 id="setTitle">Saldi iniziali</h2>
+    <p class="note">Il saldo viene sommato ai giorni che inserisci. Usa il segno meno se parti da un saldo negativo.</p>
+    <div class="balrow">
+      <label>Banca ore accumulata</label>
+      <div class="seg two" id="signB"><button type="button" data-s="1" aria-pressed="true">+</button><button type="button" data-s="-1" aria-pressed="false">−</button></div>
+      <div class="field"><label for="bh">Ore</label><input type="number" id="bh" inputmode="numeric" min="0" step="1" placeholder="0"></div>
+      <div class="field"><label for="bm">Minuti</label><input type="number" id="bm" inputmode="numeric" min="0" max="59" step="1" placeholder="0"></div>
+    </div>
+    <div class="balrow">
+      <label id="sLab">Precup del bimestre in corso</label>
+      <div class="seg two" id="signS"><button type="button" data-s="1" aria-pressed="true">+</button><button type="button" data-s="-1" aria-pressed="false">−</button></div>
+      <div class="field"><label for="sh">Ore</label><input type="number" id="sh" inputmode="numeric" min="0" step="1" placeholder="0"></div>
+      <div class="field"><label for="sm">Minuti</label><input type="number" id="sm" inputmode="numeric" min="0" max="59" step="1" placeholder="0"></div>
+    </div>
+    <div class="actions">
+      <button class="cta" id="setSave">Salva saldi</button>
+      <button class="ghost" id="setClose">Chiudi</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/*CALC*/
+const NORMAL = 525, THRESH = 30, BLOCK = 15, ENTRY_MIN = 465, ENTRY_END = 525;
+function toMin(t) { const p = String(t || "").split(":"); if (p.length < 2) return NaN; return (+p[0]) * 60 + (+p[1]); }
+function workedMin(e) {
+  const a = toMin(e.in); let b = toMin(e.out);
+  if (isNaN(a) || isNaN(b)) return NaN;
+  if (b <= a) b += 1440;
+  return b - a;
+}
+function calc(e) {
+  if (e && e.type === "ferie") return { ferie: true, worked: 0, extra: 0, late: 0, short: 0, need: 0, comp: "ferie", accB: 0, accS: 0, dedB: 0, dedS: 0, banca: 0, str: 0, fer: NORMAL };
+  const worked = workedMin(e), a = toMin(e.in);
+  let b = toMin(e.out); if (b <= a) b += 1440;
+  const ref = Math.min(Math.max(a, ENTRY_MIN), ENTRY_END) + NORMAL;
+  const late = Math.max(0, a - ENTRY_END);
+  const extra = Math.max(0, b - ref), short = Math.max(0, ref - b);
+  const need = late + short;
+  const r = { ferie: false, worked, ref, extra, late, short, need, comp: e.comp || null, accB: 0, accS: 0, dedB: 0, dedS: 0 };
+  if (extra > 0) {
+    if (extra < THRESH) r.accS = extra;
+    else { r.accB = Math.floor(extra / BLOCK) * BLOCK; r.accS = extra - r.accB; }
+  }
+  if (need > 0) { if (r.comp === "banca") r.dedB = need; else if (r.comp === "straord") r.dedS = need; }
+  r.fer = r.comp === "ferie" && need > 0 ? need : 0;
+  r.banca = r.accB - r.dedB; r.str = r.accS - r.dedS;
+  return r;
+}
+/*END*/
+
+const KEY = "bancaore.v1", SKEY = "leonardotime.settings";
+const MESI = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
+const MS = ["gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"];
+const GIORNI = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
+const GS = ["Dom","Lun","Mar","Mer","Gio","Ven","Sab"];
+const $ = id => document.getElementById(id);
+const pad = n => String(n).padStart(2, "0");
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+
+let data = {}, settings = { set: false, openB: 0, openS: 0, openSBim: null };
+function normalize() { for (const k in data) { if (data[k] && data[k].comp === "none") data[k].comp = "ferie"; } }
+try { const raw = localStorage.getItem(KEY); if (raw) data = JSON.parse(raw) || {}; } catch (e) { data = {}; }
+try { const raw = localStorage.getItem(SKEY); if (raw) settings = Object.assign(settings, JSON.parse(raw) || {}); } catch (e) {}
+normalize();
+let remoteDoc = null, syncTimer = null, dirty = false;
+function setSt(t) { const el = document.getElementById("syncSt"); if (el) el.textContent = t; }
+function persist() {
+  try { localStorage.setItem(KEY, JSON.stringify(data)); localStorage.setItem(SKEY, JSON.stringify(settings)); } catch (e) {}
+  dirty = true;
+  if (remoteDoc) { clearTimeout(syncTimer); syncTimer = setTimeout(pushRemote, 300); }
+}
+async function pushRemote() {
+  if (!remoteDoc) return;
+  try { await remoteDoc.set({ json: JSON.stringify({ entries: data, settings }), t: Date.now() }); setSt("Dati salvati nel tuo spazio privato"); }
+  catch (e) { setSt("Salvataggio non riuscito: usa il backup"); }
+}
+async function initSync() {
+  if (window.top === window.self) { setSt("Dati salvati su questo dispositivo: ogni tanto copia il backup"); return; }
+  try {
+    const db = await claude.use("db"), user = await claude.use("user");
+    if (!db || !user) { setSt("Salvataggio privato non disponibile: usa il backup"); return; }
+    const uid = await user.id();
+    if (!uid) { setSt("Salvataggio privato non disponibile: usa il backup"); return; }
+    const ref = db.doc("data/users/" + uid + "/store");
+    const snap = await ref.get();
+    remoteDoc = ref;
+    const r = snap.exists ? snap.data() : null;
+    if (r && r.json && !dirty) {
+      const o = JSON.parse(r.json);
+      data = o.entries && typeof o.entries === "object" ? o.entries : {};
+      settings = Object.assign({ set: false, openB: 0, openS: 0, openSBim: null }, o.settings || {});
+      normalize();
+      try { localStorage.setItem(KEY, JSON.stringify(data)); localStorage.setItem(SKEY, JSON.stringify(settings)); } catch (e) {}
+      render(); setSt("Dati salvati nel tuo spazio privato");
+    } else if (dirty || Object.keys(data).length || settings.set) {
+      await pushRemote();
+    } else setSt("Dati salvati nel tuo spazio privato");
+  } catch (e) { setSt("Salvataggio privato non disponibile: usa il backup"); }
+}
+
+function fmt(min, signed) {
+  const neg = min < 0, a = Math.abs(Math.round(min));
+  const s = Math.floor(a / 60) + ":" + pad(a % 60);
+  if (neg) return "−" + s;
+  return (signed && a > 0 ? "+" : "") + s;
+}
+function fmtHm(min) { const h = Math.floor(min / 60), m = min % 60; return h + "h " + pad(m) + "m"; }
+const clock = m => pad(Math.floor(m / 60) % 24) + ":" + pad(m % 60);
+const key = (y, m, d) => y + "-" + pad(m + 1) + "-" + pad(d);
+const parseKey = k => ({ y: +k.slice(0, 4), m: +k.slice(5, 7) - 1, d: +k.slice(8, 10) });
+const bim = (y, m) => y * 6 + Math.floor(m / 2);
+function bimLabel(y, m) { const b = Math.floor(m / 2) * 2; return cap(MS[b]) + "–" + cap(MS[b + 1]) + " " + y; }
+const valid = c => c.ferie || !isNaN(c.worked);
+const isPartial = e => !!e && e.type !== "ferie" && !isNaN(toMin(e.in)) && !e.out;
+const refExit = a => Math.min(Math.max(a, ENTRY_MIN), ENTRY_END) + NORMAL;
+const nowHM = () => { const d = new Date(); return pad(d.getHours()) + ":" + pad(d.getMinutes()); };
+
+const now = new Date();
+let today = key(now.getFullYear(), now.getMonth(), now.getDate());
+let vy = now.getFullYear(), vm = now.getMonth();
+let selKey = null, selComp = null;
+
+function chipsFor(c) {
+  if (c.ferie) return [["f", "Ferie"]];
+  const out = [];
+  if (c.banca !== 0) out.push(["b", "B " + fmt(c.banca, true)]);
+  if (c.str !== 0) out.push(["s", "P " + fmt(c.str, true)]);
+  if (c.need > 0 && c.comp === "ferie") out.push(["f", "Ferie"]);
+  if (c.need > 0 && !c.comp) out.push(["n", fmt(-c.need)]);
+  if (!out.length) out.push(["ok", "ok"]);
+  return out;
+}
+
+function render() {
+  const t = parseKey(today), tb = bim(t.y, t.m), vb = bim(vy, vm);
+  let allB = settings.openB || 0, curS = 0, monB = 0, monS = 0, bimS = 0, monF = 0, allF = 0;
+  if (settings.openSBim === tb) curS += settings.openS || 0;
+  if (settings.openSBim === vb) bimS += settings.openS || 0;
+  for (const k in data) {
+    const c = calc(data[k]); if (!valid(c)) continue;
+    const p = parseKey(k);
+    allB += c.banca; allF += c.fer || 0;
+    if (bim(p.y, p.m) === tb) curS += c.str;
+    if (bim(p.y, p.m) === vb) bimS += c.str;
+    if (p.y === vy && p.m === vm) { monB += c.banca; monS += c.str; monF += c.fer || 0; }
+  }
+  $("firstRun").hidden = !!settings.set;
+  const tB = $("tB"); tB.textContent = fmt(allB); tB.classList.toggle("neg", allB < 0);
+  const tS = $("tS"); tS.textContent = fmt(curS); tS.classList.toggle("neg", curS < 0);
+  let ny = t.y, nm = (Math.floor(t.m / 2) + 1) * 2; if (nm > 11) { nm = 0; ny++; }
+  $("tSsub").textContent = bimLabel(t.y, t.m).replace(/ \d+$/, "") + " · azzera il 1 " + MS[nm] + " " + ny;
+
+  $("mTitle").textContent = MESI[vm] + " " + vy;
+
+  const cal = $("cal"); cal.textContent = "";
+  ["Lun","Mar","Mer","Gio","Ven","Sab","Dom"].forEach(n => { const e = document.createElement("div"); e.className = "dow"; e.textContent = n; cal.appendChild(e); });
+  const lead = (new Date(vy, vm, 1).getDay() + 6) % 7;
+  const dim = new Date(vy, vm + 1, 0).getDate();
+  for (let i = 0; i < lead; i++) { const e = document.createElement("div"); e.className = "day empty"; cal.appendChild(e); }
+  for (let d = 1; d <= dim; d++) {
+    const k = key(vy, vm, d), wd = new Date(vy, vm, d).getDay();
+    const b = document.createElement("button"); b.type = "button";
+    b.className = "day" + (wd === 0 || wd === 6 ? " we" : "") + (k === today ? " today" : "") + (data[k] ? " has" : "");
+    b.setAttribute("aria-label", GIORNI[wd] + " " + d + " " + MESI[vm]);
+    const dn = document.createElement("span"); dn.className = "d"; dn.textContent = d; b.appendChild(dn);
+    if (data[k]) {
+      const c = calc(data[k]);
+      if (valid(c)) chipsFor(c).forEach(([cl, tx]) => { const s = document.createElement("span"); s.className = "chip " + cl; s.textContent = tx; b.appendChild(s); }); else if (isPartial(data[k])) { const s = document.createElement("span"); s.className = "chip ok"; s.textContent = data[k].in; b.appendChild(s); }
+    }
+    b.addEventListener("click", () => openSheet(k));
+    cal.appendChild(b);
+  }
+
+  let h = '<h3>' + MESI[vm] + '</h3>' +
+    '<div class="row"><span class="k">Banca ore del mese</span><span class="v b">' + fmt(monB, true) + '</span></div>' +
+    '<div class="row"><span class="k">Precup del mese</span><span class="v s">' + fmt(monS, true) + '</span></div>' +
+    '<div class="row"><span class="k">Ore di ferie fruite nel mese</span><span class="v f">' + fmt(monF) + '</span></div>' +
+    '<h3>Bimestre ' + bimLabel(vy, vm) + '</h3>' +
+    '<div class="row"><span class="k">Precup accumulato</span><span class="v s">' + fmt(bimS) + '</span></div>' +
+    '<div class="row"><span class="k">Banca ore totale (non si azzera)</span><span class="v b">' + fmt(allB) + '</span></div>' +
+    '<div class="row"><span class="k">Ore di ferie fruite (totale, non si azzera)</span><span class="v f">' + fmt(allF) + '</span></div>';
+  if (settings.set) h += '<div class="row"><span class="k">di cui saldo iniziale banca ore</span><span class="v">' + fmt(settings.openB || 0) + '</span></div>';
+  $("sum").innerHTML = h;
+
+  const list = $("list"); list.textContent = "";
+  const keys = Object.keys(data).filter(k => { const p = parseKey(k); return p.y === vy && p.m === vm; }).sort();
+  if (!keys.length) {
+    const hn = document.createElement("div"); hn.className = "hint"; hn.textContent = "Nessun giorno inserito in " + MESI[vm].toLowerCase() + ". Tocca un giorno nel calendario per registrare ingresso e uscita."; list.appendChild(hn);
+  }
+  keys.forEach(k => {
+    const e = data[k], c = calc(e), p = parseKey(k); if (!valid(c) && !isPartial(e)) return;
+    const b = document.createElement("button"); b.type = "button"; b.className = "item";
+    const wd = new Date(p.y, p.m, p.d).getDay();
+    let mid;
+    if (c.ferie) mid = 'Giornata di ferie<small>nessuna ora scalata</small>';
+    else if (isPartial(e)) mid = e.in + ' → …<small>uscita prevista ' + clock(refExit(toMin(e.in))) + '</small>';
+    else {
+      let sm = fmtHm(c.worked);
+      if (c.late > 0) sm += ' · ritardo ' + fmt(c.late);
+      if (c.extra > 0) sm += ' · +' + fmt(c.extra) + ' dopo l\'uscita';
+      if (c.short > 0) sm += ' · −' + fmt(c.short) + ' prima dell\'uscita';
+      mid = e.in + ' → ' + e.out + '<small>' + sm + '</small>';
+    }
+    b.innerHTML = '<span class="dd">' + p.d + '<small>' + GS[wd] + '</small></span>' +
+      '<span class="hh">' + mid + '</span>' +
+      '<span class="chips">' + (isPartial(e) ? [["ok", "in corso"]] : chipsFor(c)).map(([cl, tx]) => '<span class="chip ' + cl + '">' + tx + '</span>').join("") + '</span>';
+    b.addEventListener("click", () => openSheet(k));
+    list.appendChild(b);
+  });
+  renderToday(); renderPlan();
+}
+
+function setComp(c) {
+  selComp = c;
+  document.querySelectorAll("#seg button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.c === c)));
+}
+function preview() {
+  const e = { in: $("tin").value, out: $("tout").value, comp: selComp };
+  const c = calc(e), ok = !isNaN(c.worked);
+  const wrap = $("compWrap"), res = $("res");
+  if (!ok && isPartial(e)) {
+    const ref = refExit(toMin(e.in)), lt = Math.max(0, toMin(e.in) - ENTRY_END);
+    let ph = '<div class="row"><span class="k">Uscita prevista</span><span class="v">' + clock(ref) + '</span></div>' +
+      '<div class="row"><span class="k">Solo banca ore da</span><span class="v b">' + clock(ref + 30) + '</span></div>';
+    if (lt > 0) ph += '<div class="row"><span class="k">Ingresso dopo le 8:45</span><span class="v neg">ritardo ' + fmt(lt) + '</span></div>';
+    ph += '<div class="row"><span class="k">Puoi salvare ora e aggiungere l’uscita più tardi.</span></div>';
+    res.innerHTML = ph; wrap.hidden = true; $("save").disabled = false; return;
+  }
+  if (!ok) {
+    const cur = data[selKey];
+    res.innerHTML = '<div class="row"><span class="k">' + (cur && cur.type === "ferie" ? "Giornata di ferie: nessuna ora scalata dai saldi." : "Inserisci ingresso e uscita per vedere il calcolo.") + '</span></div>';
+    wrap.hidden = true; $("save").disabled = true; return;
+  }
+  let h = '<div class="row"><span class="k">Ore lavorate</span><span class="v">' + fmtHm(c.worked) + '</span></div>';
+  h += '<div class="row"><span class="k">Uscita prevista</span><span class="v">' + clock(c.ref) + '</span></div>';
+  if (c.late > 0) h += '<div class="row"><span class="k">Ingresso dopo le 8:45</span><span class="v neg">ritardo ' + fmt(c.late) + '</span></div>';
+  if (c.extra > 0) {
+    h += '<div class="row"><span class="k">Dopo l\'uscita prevista</span><span class="v">+' + fmt(c.extra) + '</span></div>';
+    h += '<div class="row"><span class="k">Banca ore maturata</span><span class="v b">' + fmt(c.accB, true) + '</span></div>';
+    h += '<div class="row"><span class="k">Precup maturato</span><span class="v s">' + fmt(c.accS, true) + '</span></div>';
+  }
+  if (c.short > 0) h += '<div class="row"><span class="k">Uscita prima del previsto</span><span class="v neg">' + fmt(-c.short) + '</span></div>';
+  if (c.extra === 0 && c.need === 0) h += '<div class="row"><span class="k">Giornata completa, nessun extra.</span></div>';
+  if (c.need > 0) {
+    h += '<div class="row"><span class="k">Da giustificare</span><span class="v neg">' + fmt(c.need) + '</span></div>';
+    if (c.comp === "banca") h += '<div class="row"><span class="k">Sottratti dalla banca ore</span><span class="v b">' + fmt(-c.need) + '</span></div>';
+    else if (c.comp === "straord") h += '<div class="row"><span class="k">Sottratti dal Precup</span><span class="v s">' + fmt(-c.need) + '</span></div>';
+    else if (c.comp === "ferie") h += '<div class="row"><span class="k">Coperto con ferie</span><span class="v f">nessuna sottrazione</span></div>';
+    $("cmpLab").textContent = "Come copri " + fmt(c.need) + " da giustificare?";
+    wrap.hidden = false;
+  } else wrap.hidden = true;
+  res.innerHTML = h;
+  $("save").disabled = c.need > 0 && !selComp;
+}
+function openSheet(k) {
+  selKey = k;
+  const p = parseKey(k), e = data[k];
+  $("sTitle").textContent = GIORNI[new Date(p.y, p.m, p.d).getDay()] + " " + p.d + " " + MESI[p.m].toLowerCase() + " " + p.y;
+  const timed = e && e.type !== "ferie";
+  $("tin").value = timed ? e.in : ""; $("tout").value = timed ? e.out : "";
+  setComp(timed && e.comp ? e.comp : null);
+  $("del").hidden = !e;
+  $("ferieDay").hidden = !!(e && e.type === "ferie");
+  $("scrim").hidden = false;
+  preview();
+}
+function closeSheet() { $("scrim").hidden = true; selKey = null; }
+
+$("tin").addEventListener("input", preview);
+$("tout").addEventListener("input", preview);
+$("seg").addEventListener("click", ev => { const b = ev.target.closest("button"); if (b) { setComp(b.dataset.c); preview(); } });
+$("save").addEventListener("click", () => {
+  if (!selKey) return;
+  const e = { in: $("tin").value, out: $("tout").value }, c = calc(e);
+  e.comp = c.need > 0 ? selComp : null;
+  data[selKey] = e; persist(); closeSheet(); render();
+});
+$("ferieDay").addEventListener("click", () => { if (selKey) { data[selKey] = { type: "ferie" }; persist(); closeSheet(); render(); } });
+$("del").addEventListener("click", () => { if (selKey) { delete data[selKey]; persist(); closeSheet(); render(); } });
+$("close").addEventListener("click", closeSheet);
+$("scrim").addEventListener("click", ev => { if (ev.target === $("scrim")) closeSheet(); });
+$("btnToday").addEventListener("click", () => { const t = parseKey(today); vy = t.y; vm = t.m; render(); openSheet(today); });
+$("prev").addEventListener("click", () => { vm--; if (vm < 0) { vm = 11; vy--; } render(); });
+$("next").addEventListener("click", () => { vm++; if (vm > 11) { vm = 0; vy++; } render(); });
+
+/* Saldi iniziali */
+function setSign(id, s) { document.querySelectorAll("#" + id + " button").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.s === s))); }
+function getSign(id) { const b = document.querySelector("#" + id + ' button[aria-pressed="true"]'); return b ? +b.dataset.s : 1; }
+function fillBal(sid, hid, mid, v) { setSign(sid, v < 0 ? -1 : 1); const a = Math.abs(v || 0); $(hid).value = a ? Math.floor(a / 60) : ""; $(mid).value = a ? a % 60 : ""; }
+function readBal(sid, hid, mid) {
+  const h = Math.max(0, parseInt($(hid).value, 10) || 0), m = Math.min(59, Math.max(0, parseInt($(mid).value, 10) || 0));
+  return getSign(sid) * (h * 60 + m);
+}
+function openSettings() {
+  const t = parseKey(today);
+  $("sLab").textContent = "Precup del bimestre in corso (" + bimLabel(t.y, t.m) + ")";
+  fillBal("signB", "bh", "bm", settings.openB || 0);
+  fillBal("signS", "sh", "sm", settings.openSBim === bim(t.y, t.m) ? settings.openS || 0 : 0);
+  $("scrimS").hidden = false;
+}
+function closeSettings() { $("scrimS").hidden = true; }
+["signB", "signS"].forEach(id => $(id).addEventListener("click", ev => { const b = ev.target.closest("button"); if (b) setSign(id, +b.dataset.s); }));
+$("btnSet").addEventListener("click", openSettings);
+$("btnFirst").addEventListener("click", openSettings);
+$("setClose").addEventListener("click", closeSettings);
+$("scrimS").addEventListener("click", ev => { if (ev.target === $("scrimS")) closeSettings(); });
+$("setSave").addEventListener("click", () => {
+  const t = parseKey(today);
+  settings = { set: true, openB: readBal("signB", "bh", "bm"), openS: readBal("signS", "sh", "sm"), openSBim: bim(t.y, t.m) };
+  persist(); closeSettings(); render();
+});
+document.addEventListener("keydown", ev => { if (ev.key === "Escape") { if (!$("scrim").hidden) closeSheet(); if (!$("scrimS").hidden) closeSettings(); } });
+
+/* Backup */
+$("bkCopy").addEventListener("click", async () => {
+  const txt = JSON.stringify({ v: 2, entries: data, settings }); $("bk").value = txt;
+  let done = false;
+  try { await navigator.clipboard.writeText(txt); done = true; } catch (e) {}
+  if (!done) { $("bk").focus(); $("bk").select(); }
+  $("bkMsg").textContent = done ? "Backup copiato." : "Testo selezionato: copialo manualmente.";
+});
+$("bkRestore").addEventListener("click", () => {
+  try {
+    const o = JSON.parse($("bk").value);
+    if (!o || typeof o !== "object" || Array.isArray(o)) throw 0;
+    const ent = o.entries && typeof o.entries === "object" ? o.entries : o;
+    for (const k in ent) { if (!/^\d{4}-\d{2}-\d{2}$/.test(k)) throw 0; if (ent[k] && ent[k].type === "ferie") continue; if (!isPartial(ent[k]) && isNaN(workedMin(ent[k]))) throw 0; }
+    data = ent; if (o.entries && o.settings) settings = Object.assign({ set: false, openB: 0, openS: 0, openSBim: null }, o.settings);
+    normalize(); persist(); render(); $("bkMsg").textContent = "Dati ripristinati.";
+  } catch (e) { $("bkMsg").textContent = "Backup non valido: nessun dato modificato."; }
+});
+
+/* Schede */
+function setTab(t) {
+  ["oggi", "plan", "reg"].forEach(n => { $("pg-" + n).hidden = n !== t; });
+  document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.t === t)));
+}
+$("tabs").addEventListener("click", ev => { const b = ev.target.closest("button"); if (b) setTab(b.dataset.t); });
+const rw = (k, v, cl) => '<div class="row"><span class="k">' + k + '</span>' + (v === undefined ? '' : '<span class="v' + (cl ? ' ' + cl : '') + '">' + v + '</span>') + '</div>';
+
+/* Oggi */
+const tdT = { in: false, out: false };
+function renderToday() {
+  const e = data[today], t = parseKey(today);
+  $("tdTitle").textContent = GIORNI[new Date(t.y, t.m, t.d).getDay()] + " " + t.d + " " + MESI[t.m].toLowerCase();
+  const st = !e ? "none" : e.type === "ferie" ? "ferie" : isPartial(e) ? "in" : "done";
+  $("tdFormIn").hidden = st !== "none";
+  $("tdFormOut").hidden = st !== "in";
+  $("tdEdit").hidden = st === "none";
+  $("tdEdit").textContent = st === "in" ? "Modifica ingresso" : "Modifica giornata";
+  if (st === "none" && !tdT.in) $("tdInT").value = nowHM();
+  if (st === "in" && !tdT.out) $("tdOutT").value = nowHM();
+  let h = "";
+  if (st === "none") h = '<div class="hint">Nessun ingresso registrato oggi.</div>';
+  else if (st === "ferie") h = rw("Ore di ferie fruite", fmt(NORMAL), "f");
+  else if (st === "in") {
+    const a = toMin(e.in), ref = refExit(a), lt = Math.max(0, a - ENTRY_END);
+    h = '<div class="hero"><div class="lab">Uscita prevista</div><div class="big">' + clock(ref) + '</div><div class="sub">Ingresso ' + e.in + '</div></div>' +
+      '<div class="hero"><div class="lab">Solo banca ore, da</div><div class="big b">' + clock(ref + 30) + '</div><div class="sub">+0:30 banca ore · nessun Precup</div></div>';
+    if (lt > 0) h += rw("Ritardo da giustificare", fmt(lt), "neg");
+  } else {
+    const c = calc(e);
+    h = rw("Ingresso", e.in) + rw("Uscita", e.out) + rw("Uscita prevista", clock(c.ref)) + rw("Ore lavorate", fmtHm(c.worked));
+    if (c.banca !== 0) h += rw("Banca ore", fmt(c.banca, true), "b");
+    if (c.str !== 0) h += rw("Precup", fmt(c.str, true), "s");
+    if (c.need > 0 && !c.comp) h += rw("Da giustificare", fmt(c.need), "neg");
+    if (c.need > 0 && c.comp === "ferie") h += rw("Ore di ferie fruite", fmt(c.fer), "f");
+    if (c.banca === 0 && c.str === 0 && c.need === 0) h += rw("Giornata completa, nessun extra");
+  }
+  $("tdInfo").innerHTML = h;
+}
+$("tdInT").addEventListener("input", () => { tdT.in = true; });
+$("tdOutT").addEventListener("input", () => { tdT.out = true; });
+$("tdInNow").addEventListener("click", () => { $("tdInT").value = nowHM(); tdT.in = true; });
+$("tdOutNow").addEventListener("click", () => { $("tdOutT").value = nowHM(); tdT.out = true; });
+$("tdInSave").addEventListener("click", () => {
+  const v = $("tdInT").value; if (isNaN(toMin(v))) return;
+  data[today] = { in: v, out: "", comp: null }; tdT.in = false; persist(); render();
+});
+$("tdOutSave").addEventListener("click", () => {
+  const v = $("tdOutT").value, e = data[today]; if (isNaN(toMin(v)) || !e) return;
+  e.out = v; e.comp = null; tdT.out = false; $("tdOutT").value = "";
+  const c = calc(e); persist(); render();
+  if (c.need > 0) openSheet(today);
+});
+$("tdEdit").addEventListener("click", () => openSheet(today));
+
+/* Pianifica */
+let plTouched = false;
+function renderPlan() {
+  const cur = data[today];
+  if (!plTouched && cur && cur.type !== "ferie" && !isNaN(toMin(cur.in))) $("plIn").value = cur.in;
+  const a = toMin($("plIn").value), box = $("plOut");
+  if (isNaN(a)) { box.innerHTML = '<div class="hint">Inserisci l’orario di ingresso per vedere a che ora uscire.</div>'; return; }
+  const ref = refExit(a), lt = Math.max(0, a - ENTRY_END);
+  let h = '<div class="hero"><div class="lab">Uscita prevista</div><div class="big">' + clock(ref) + '</div></div>' +
+    '<div class="hero"><div class="lab">Solo banca ore, da</div><div class="big b">' + clock(ref + 30) + '</div><div class="sub">+0:30 banca ore · Precup 0:00</div></div>' +
+    '<h3>Altri orari senza Precup</h3>';
+  for (let x = 45; x <= 180; x += 15) h += rw(clock(ref + x), fmt(x, true) + ' banca ore', "b");
+  h += '<p class="pnote">Uscendo in un orario diverso da questi, i minuti che avanzano diventano Precup, che si azzera a fine bimestre.</p>';
+  if (lt > 0) h += '<p class="pnote">Entrando dopo le 8:45 hai ' + fmt(lt) + ' di ritardo da giustificare.</p>';
+  box.innerHTML = h;
+}
+$("plIn").addEventListener("input", () => { plTouched = true; renderPlan(); });
+
+/* Riapertura dell'app dopo ore o dopo la mezzanotte */
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) return;
+  const n = new Date(), k = key(n.getFullYear(), n.getMonth(), n.getDate());
+  if (k !== today) { today = k; vy = n.getFullYear(); vm = n.getMonth(); tdT.in = tdT.out = false; $("tdInT").value = ""; $("tdOutT").value = ""; plTouched = false; $("plIn").value = ""; }
+  if (!tdT.in && !$("tdFormIn").hidden) $("tdInT").value = nowHM();
+  if (!tdT.out && !$("tdFormOut").hidden) $("tdOutT").value = nowHM();
+  render();
+});
+
+render();
+initSync();
+</script>
+
+</body></html>
